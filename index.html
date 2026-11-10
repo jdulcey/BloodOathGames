@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BloodOath Games</title>
+  <meta name="description" content="BloodOath Games: estudio independiente de videojuegos.">
+  <style>
+    :root {
+      --oxblood: #2b0a0e;
+      --wine: #4a1118;
+      --bone: #efe6d8;
+      --ash: #b9a99a;
+      --ember: #d9453a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: radial-gradient(ellipse at 50% 35%, var(--wine) 0%, var(--oxblood) 70%);
+      color: var(--bone);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+    }
+    main { max-width: 34rem; text-align: center; }
+    .seal {
+      width: 5.5rem;
+      height: 5.5rem;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
+      background: var(--ember);
+      box-shadow: inset 0 0 0 0.3rem var(--oxblood), inset 0 0 0 0.45rem var(--bone);
+      animation: press 0.9s cubic-bezier(.2, .8, .2, 1) both;
+    }
+    @keyframes press {
+      from { transform: scale(1.35); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+    h1 {
+      font-size: clamp(2.4rem, 8vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    p { color: var(--ash); font-size: 1.1rem; }
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.7rem 1.6rem;
+      color: var(--bone);
+      border: 1px solid var(--bone);
+      border-radius: 2px;
+      text-decoration: none;
+    }
+    a:hover { background: var(--bone); color: var(--oxblood); }
+    a:focus-visible { outline: 3px solid var(--ember); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      .seal { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="seal" role="img" aria-label="Sello de BloodOath Games"></div>
+    <h1>BloodOath Games</h1>
+    <p>Estamos preparando algo. La página oficial llegará pronto.</p>
+    <a href="https://github.com/jdulcey/BloodOathGames">Ver el proyecto en GitHub</a>
+  </main>
+</body>
+</html>
